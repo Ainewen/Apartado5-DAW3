@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<!--AÑADO UNA LÍNEA DE PRUEBA-->
+	<head>
+		<meta charset="utf-8">
+		<title>Tarea para DWEC02 - parte_a</title>
+	</head>
+	<!--AGREGO OTRA LÍNEA PARA COMPARAR-->
+	<body>
+		<h1>Tarea 2 DWEC02 - Parte A</h1>
+		<script type="text/javascript">
+		document.write("<table><tr>");
+	
+//Iniciamos las variables que vamos a utilizar 6, 7, 8 y 0
+	var a = 6;
+	var b = 7;
+	var c = 8;
+	var x = 0;
+
+//Primero usamos el bucle 'do...while' para la tabla de multiplicar del 6
+	document.write("<td width=\"33%\">Tabla de multiplicar del 6 <br />");
+	do{
+		document.write(a+" x "+x+" = "+(a*x)+"<br />");
+		x++;
+	}while(x<=10);
+	x=1; //Inicializamos la variable X para poder usarla de nuevo
+	
+//Segundo usamos el bucle 'while' para imprimir la table de sumar del 7
+	document.write("</td><td width=\"33%\">Tabla de sumar del 7 <br />");
+	while(x<=10){
+		document.write(b+" + "+x+" = "+(b+x)+"<br />");
+		x++;
+	}
+
+//Tercero usamos el bucle 'for' para la tabla de dividir del 8
+//He usado % para crear división con resultado enteros, ya que sino
+//salían muchos decimales
+	document.write("</td><td width=\"33%\">Tabla de	dividir del 8 <br />");
+	for (x=1;x<=10;x++){
+		document.write(c+" / "+x+" = "+(c%x)+"<br />");
+	}
+	
+	//Creamos una nueva fila  y usaré dos celdas
+	document.write("</td><td></td></tr></table>");
+	
+	//Resultado de 127/8. El desplazamiento a la derecha es una división entre 2,
+	//por lo que para dividir entre 8, tenemos que poner 3 (ya que 2 elevado a 3
+	//es igual a 8)
+	document.write("<h4>127/8 con desplazamiento de bits: <i>"+(127>>3)+"</i></h4>");
+	
+	//Resultado de 80x4. El desplazamiento a la izquierda es una multiplicación por 2,
+	//por lo que para multiplicar por 4, tenemos que poner 2 (ya que 2 elevado a 2,
+	//es igual a 4
+	document.write("<h4>80x4 con desplazamiento de bits: <i>"+(80<<2)+"</i></h4>");
+	
+	//Resultado de 35/2. El desplazamiento a la derecha es una división entre 2,
+	//por lo que para dividir entre 2, tenemos que poner 1 (ya que 2 elevado a 1,
+	//es igual a 2
+	document.write("<h4>35/2 con desplazamiento de bits: <i>"+(35>>2)+"</i></h4>");
+	
+	//Resultado de 40x16. El desplazamiento a la izquierda es una multiplicación por 2,
+	//por lo que para multiplicar por 16, tenemos que poner 4 (ya que 2 elevado a 4,
+	//es igual a 16
+	document.write("<h4>40x16 con desplazamiento de bits: <i>"+(40<<4)+"</i></h4>");
+	
+		</script>
+	</body>
+</html>
